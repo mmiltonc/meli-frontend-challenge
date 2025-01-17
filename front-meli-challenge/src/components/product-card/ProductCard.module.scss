@@ -1,0 +1,47 @@
+.productCard {
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    color: grey;
+    border-bottom: 2px solid rgb(239, 239, 239);
+
+    .image {
+        width: 150px;
+        max-width: 150px;
+        height: 150px;
+        max-height: 150px;
+        margin: 2%;
+    }
+
+    .infoProduct {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+
+        .productPrice {
+            font-size: 25px;
+        }
+
+        .productTitles {
+            h3 {
+                margin: 0;
+            }
+
+            .productSeller {
+                display: flex;
+                align-items: center;
+
+                p {
+                    margin: 0;
+                    padding-right: 5px;
+                }
+                h4 {
+                    margin: 0;
+                }
+
+            }
+        }
+    }
+}
