@@ -1,4 +1,4 @@
-import SearchBar from '../components/search-bar/SearchBar';
+import SearchBar from '../../components/shared/SearchBar';
 import styles from './Home.module.scss'
 
 const Home = () => {
@@ -9,4 +9,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export {Home};

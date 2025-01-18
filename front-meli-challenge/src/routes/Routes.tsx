@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from '../pages/Home';
-import SearchResults from '../pages/SearchResults';
-import ProductDetails from '../pages/ProductDetails';
+import { Home, SearchResults, ProductDetails } from '../pages'
 
 const AppRoutes = () => (
     <Router>
