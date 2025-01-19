@@ -4,13 +4,18 @@ import SearchBar from '../../components/shared/SearchBar';
 import styles from './SearchResults.module.scss'
 import { useQuery } from 'react-query';
 import { getSearchItems } from '../../services/api';
-import type { Product } from '../../types'
+import type { Product, ResponseSearch } from '../../types'
 import CircularProgress from '@mui/material/CircularProgress';
+import { useMemo } from 'react';
 
 const SearchResults = () => {
     const [searchParams] = useSearchParams();
-    const query = searchParams.get('search') || '';
-    const { data: listItems, isLoading, isError} = useQuery<Product[]>({ queryFn: () => getSearchItems(query), queryKey: ['getItems', {query}]})
+    const query = useMemo(() => searchParams.get('search') || '', [searchParams])
+    const { data: listItems, isLoading, isError} = useQuery<ResponseSearch>({ 
+        queryFn: () => getSearchItems(query), 
+        queryKey: ['getItems', {query}], 
+        retry: false
+    })
 
     if (isLoading) return (
         <div className={styles.isLoading}>
@@ -27,7 +32,7 @@ const SearchResults = () => {
         <div className={styles.searchResults}>
             <SearchBar />
             <div className={styles.resultsBox}>
-                {listItems?.map((item: Product) => (
+                {listItems?.items.map((item: Product) => (
                     <ProductCard key={item.id} data={item} />
                 ))}
             </div>

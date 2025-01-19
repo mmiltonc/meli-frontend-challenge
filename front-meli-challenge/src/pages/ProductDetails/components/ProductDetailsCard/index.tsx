@@ -8,20 +8,20 @@ interface ProductCardProps {
 }
 
 const ProductDetailsCard: React.FC<ProductCardProps> = ({ data }) => {
-    const { title, price, descriptions, pictures } = data
+    const { title, price, description, picture } = data.item
 
     return (
         <div className={styles.productDetailsCard}>
             <div className={styles.infoDetail}>
-                <img src={pictures[0].secure_url} alt={title} />
+                <img src={picture} alt={title} />
                 <div className={styles.productTitlePrice}>
                     <h1>{title}</h1>
-                    <p>{formattedPrice(price)} </p>
+                    <p>{formattedPrice(price.amount)} </p>
                     <button>Comprar</button>
                 </div>
             </div>
             <div className={styles.infoDescription}>
-                <p>{descriptions}</p>
+                <p>{description}</p>
             </div>
         </div>
     );

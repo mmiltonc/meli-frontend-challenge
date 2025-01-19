@@ -1,31 +1,41 @@
-interface ResponseSearch {
-    results: Product[];
+
+interface Price {
+  currency: string;
+  amount: number;
+  decimals: number;
 }
 
 interface Product {
-    id: string;
-    title: string;
-    price: number;
-    seller: {id: number, nickname: string};
-    thumbnail: string;
-    free_shipping: boolean;
+  id: string;
+  title: string;
+  price: Price;
+  picture: string;
+  condition: string;
+  free_shipping: boolean;
 }
 
-interface ResponseDetail {
-    results: ProductDetail;
+interface Item {
+  id: string;
+  title: string;
+  price: Price;
+  picture: string;
+  condition: string;
+  free_shipping: boolean;
+  description: string;
 }
-
+interface Author {
+  name: string;
+  lastname: string;
+}
+interface ResponseSearch {
+  author: Author;
+  categories: string[];
+  items: Product[];
+}
 
 interface ProductDetail {
-    pictures: Picture[];
-    title: string;
-    price: number;
-    condition: string;
-    descriptions: string[]
+  author: Author;
+  item: Item;
 }
 
-interface Picture {
-    secure_url: string;
-}
-
-export type { ResponseSearch, Product, ResponseDetail, ProductDetail }
+export type { ResponseSearch, Product, ProductDetail }

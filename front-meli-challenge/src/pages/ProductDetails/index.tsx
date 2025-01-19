@@ -13,9 +13,6 @@ const ProductDetails = () => {
         queryFn: () => getProductoDetail(id || '' ), 
         queryKey: ['getProductoDetail', {id}],
     })
-    console.log('Valor de id:', id);
-    console.log('Estados de React Query:', { isLoading, error, itemDetail });
-
 
     if (isLoading) return (
         <div className={styles.isLoading}>

@@ -9,25 +9,19 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({data}) => {
-    const { id, title, price, seller, thumbnail, free_shipping } = data
-
+    const { id, title, price, picture, free_shipping } = data
     return (
         <Link to={`/items/${id}`}>
             <div className={styles.productCard}>
-                <img className={styles.image} src={thumbnail} alt={title} />
+                <img className={styles.image} src={picture} alt={title} />
                 <div className={styles.infoProduct}>
-                    <p className={styles.productPrice}>{formattedPrice(price)}</p>
+                    <p className={styles.productPrice}>{formattedPrice(price.amount)}</p>
                     <div className={styles.productTitles}>
                         <h3>{title}</h3>
-                        <div className={styles.productSeller}>
-                        <p>Por</p>
-                        <h4>{seller.nickname}</h4>
-                        </div>
                     </div>
                     {free_shipping && <span>Envío gratis</span>}
                 </div>
             </div>
-
         </Link>
     );
 };
