@@ -17,7 +17,7 @@ const ProductCard: React.FC<ProductCardProps> = ({data}) => {
                 <div className={styles.infoProduct}>
                     <p className={styles.productPrice}>{formattedPrice(price.amount, price.currency, price.decimals)}</p>
                     <div className={styles.productTitles}>
-                        <h3>{title}</h3>
+                        <h3 data-testid="product-title">{title}</h3>
                     </div>
                     {free_shipping && <span>Envío gratis</span>}
                 </div>
