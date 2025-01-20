@@ -5,7 +5,7 @@ const BASE_URL = 'https://api.mercadolibre.com';
 export const getItems = async (query: string) => {
   const response = await axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`);
   return {
-    author: { name: 'John', lastname: 'Doe' },
+    author: { name: 'Milton', lastname: 'Collard' },
     categories: response.data.filters
       .find((filter: any) => filter.id === 'category')
       ?.values.map((cat: any) => cat.name) || [],
@@ -33,7 +33,7 @@ export const getItemDetail = async (id: string) => {
   const item = itemResponse.data;
 
   return {
-    author: { name: 'John', lastname: 'Doe' },
+    author: { name: 'Milton', lastname: 'Collard' },
     item: {
       id: item.id,
       title: item.title,

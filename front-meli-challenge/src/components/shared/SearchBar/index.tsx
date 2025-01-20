@@ -2,6 +2,8 @@ import { useState } from 'react';
 import styles from './SearchBar.module.scss';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../../assets/image/logo_meli.png';
+import { VscSearch } from "react-icons/vsc";
+
 const SearchBar = () => {
     const [query, setQuery] = useState('');
     const navigate = useNavigate();
@@ -13,8 +15,13 @@ const SearchBar = () => {
 
     return (
         <div className={styles.searchBar}>
-            <img className={styles.logo} src={logo} alt='logo' />
-            <form onSubmit={(e) => handleSearch(e)}>
+            <img 
+                className={styles.logo} 
+                src={logo} 
+                alt='logo' 
+                onClick={() => navigate(`/`)}
+            />
+            <form onSubmit={(e) => handleSearch(e)} data-testid="search-form">
                 <input
                     className={styles.input}
                     type="text"
@@ -22,7 +29,7 @@ const SearchBar = () => {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />
-                <button className={styles.buttonSearch} type='submit'>B</button>
+                <button className={styles.buttonSearch} type='submit'><VscSearch className={styles.icon}/></button>
             </form>
         </div>
     );

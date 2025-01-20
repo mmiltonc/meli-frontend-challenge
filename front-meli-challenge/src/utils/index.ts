@@ -1,10 +1,10 @@
 
-const formattedPrice = (price: number) => {
+const formattedPrice = (price: number, currency: string, decimal: number) => {
     return new Intl.NumberFormat('es-AR', {
         style: 'currency',
-        currency: 'ARS',
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0,
+        currency: currency,
+        minimumFractionDigits: decimal,
+        maximumFractionDigits: decimal,
     }).format(price);
        
 }

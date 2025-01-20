@@ -1,7 +1,19 @@
 {
   "files": [],
+  "include": [
+    "src",
+    "jest.config.ts",
+    "global.d.ts"
+  ],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "lib": ["DOM", "ES2021"],
+    "esModuleInterop": true,
+    "module": "commonjs", 
+    "jsx": "react-jsx",
+    "types": ["node", "jest", "@testing-library/jest-dom"]
+  }
 }

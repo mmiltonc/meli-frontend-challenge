@@ -36,6 +36,7 @@ interface ResponseSearch {
 interface ProductDetail {
   author: Author;
   item: Item;
+  error?: string;
 }
 
 export type { ResponseSearch, Product, ProductDetail }

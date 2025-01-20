@@ -16,7 +16,7 @@ const ProductDetailsCard: React.FC<ProductCardProps> = ({ data }) => {
                 <img src={picture} alt={title} />
                 <div className={styles.productTitlePrice}>
                     <h1>{title}</h1>
-                    <p>{formattedPrice(price.amount)} </p>
+                    <p>{formattedPrice(price.amount, price.currency, price.decimals)} </p>
                     <button>Comprar</button>
                 </div>
             </div>
