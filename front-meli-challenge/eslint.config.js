@@ -15,7 +15,7 @@ export default tseslint.config(
       'plugin:react/recommended',
       'plugin:@typescript-eslint/recommended',
       'plugin:react-hooks/recommended',
-      'prettier', // Debe ir al final para evitar conflictos con Prettier
+      'prettier', 
     ],parser: '@typescript-eslint/parser',
     parserOptions: {
       ecmaFeatures: {
@@ -31,14 +31,14 @@ export default tseslint.config(
     },
     plugins: ['react', '@typescript-eslint', 'prettier'],
     rules: {
-      'prettier/prettier': 'error', // Muestra errores si no se cumple la configuración de Prettier
-      'react/react-in-jsx-scope': 'off', // Desactiva esta regla para React 17+
-      'react/prop-types': 'off', // No es necesario usar PropTypes con TypeScript
-      '@typescript-eslint/no-unused-vars': ['warn'], // Advertencias para variables no usadas
+      'prettier/prettier': 'error',
+      'react/react-in-jsx-scope': 'off', 
+      'react/prop-types': 'off', 
+      '@typescript-eslint/no-unused-vars': ['warn'], 
     },
     settings: {
       react: {
-        version: 'detect', // Detecta la versión de React automáticamente
+        version: 'detect',
       },
     },
   },
