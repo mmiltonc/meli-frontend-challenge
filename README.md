@@ -10,12 +10,20 @@ Frontend: front-melo-challenge
 Instalación
 
 Backend
+/----------------------------------------------------------------------
 -Navegar hasta el directorio "back-meli-challenge"
+
 -Instalar dependencias: npm install
+
 -Iniciar el servidor en modo desarrollo: npm run dev
+
+
 Frontend
+/----------------------------------------------------------------------
 -Navegar hasta el directorio "front-meli-challenge"
+
 -Instalar dependencias: npm install
+
 -Iniciar el servidor en modo desarrollo: npm run dev
 
 
