@@ -11,6 +11,7 @@ Instalación
 
 Backend
 /----------------------------------------------------------------------
+
 -Navegar hasta el directorio "back-meli-challenge"
 
 -Instalar dependencias: npm install
@@ -20,6 +21,7 @@ Backend
 
 Frontend
 /----------------------------------------------------------------------
+
 -Navegar hasta el directorio "front-meli-challenge"
 
 -Instalar dependencias: npm install
