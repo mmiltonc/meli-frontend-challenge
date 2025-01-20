@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './SearchBar.module.scss';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../../assets/image/logo_meli.png';
-import { VscSearch } from "react-icons/vsc";
+import SearchIcon from '@mui/icons-material/Search';
 
 const SearchBar = () => {
     const [query, setQuery] = useState('');
@@ -29,7 +29,7 @@ const SearchBar = () => {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />
-                <button className={styles.buttonSearch} type='submit'><VscSearch className={styles.icon}/></button>
+                <button className={styles.buttonSearch} type='submit'><SearchIcon className={styles.icon}/></button>
             </form>
         </div>
     );

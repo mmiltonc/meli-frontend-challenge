@@ -21,7 +21,10 @@ const ProductDetailsCard: React.FC<ProductCardProps> = ({ data }) => {
                 </div>
             </div>
             <div className={styles.infoDescription}>
-                <p>{description}</p>
+                <span>Descripción del producto</span>
+                {description ? (
+                    <p>{description}</p>
+                ) : ('Producto sin descripción')}
             </div>
         </div>
     );
